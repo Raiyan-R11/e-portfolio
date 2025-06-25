@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { Sun, Moon } from 'lucide-react'; // Using lucide-react for theme toggle icons
+import Image from 'next/image'
 
 // Create a Theme Context
 const ThemeContext = createContext();
@@ -119,14 +120,16 @@ function AboutSection() {
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">About Me</h2>
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
           <div className="w-48 h-48 flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-blue-500 dark:border-purple-600">
-            <img
+            <Image
               src="https://placehold.co/192x192/4F46E5/FFFFFF?text=Your+Image"
               alt="Mohamed Raiyan Rizwan"
               className="w-full h-full object-cover"
+              width={192}  // required
+              height={192} // required
             />
           </div>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed text-center md:text-left">
-            Hey there! I'm Mohamed Raiyan Rizwan, a passionate Full-Stack Developer and AI Enthusiast with a strong foundation in Computer Science and Data Science. I'm currently pursuing my BSc at the American University of Sharjah, where I've gained hands-on experience in building robust applications and developing intelligent systems. I thrive on solving complex problems and am always eager to learn and apply new technologies to create impactful solutions. My journey involves crafting efficient code, exploring the depths of artificial intelligence, and contributing to innovative projects.
+           {`Hey there! I'm Mohamed Raiyan Rizwan, a passionate Full-Stack Developer and AI Enthusiast with a strong foundation in Computer Science and Data Science. I'm currently pursuing my BSc at the American University of Sharjah, where I've gained hands-on experience in building robust applications and developing intelligent systems. I thrive on solving complex problems and am always eager to learn and apply new technologies to create impactful solutions. My journey involves crafting efficient code, exploring the depths of artificial intelligence, and contributing to innovative projects.`}
           </p>
         </div>
         <div className="mt-8 space-x-4 text-center">
@@ -187,7 +190,7 @@ function AboutSection() {
           <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
             <li><strong>6th Place at AI Hackathon II</strong> (2025)</li>
             <li><strong>Najim Appreciation Award</strong> (Emirates Group IT, 2024)</li>
-            <li><strong>Dean's List</strong> (x4), <strong>Chancellor's List</strong> (x1), AUS</li>
+            <li><strong>{"Dean's List"}</strong> (x4), <strong>{"Chancellor's List"}</strong> (x1), AUS</li>
             <li><strong>Certificates:</strong> AI Course at Samsung Innovation Campus, JavaScript Algorithms (freeCodeCamp)</li>
           </ul>
         </div>
@@ -258,7 +261,7 @@ function ProjectsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {fullStackProjects.map((project, index) => (
             <a key={index} href={project.link} className="block rounded-xl overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 bg-white dark:bg-gray-800">
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+              <Image src={project.image} alt={project.title} className="w-full h-48 object-cover" width={500}  height={300}/>
               <div className="p-6">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h4>
                 <p className="text-gray-700 dark:text-gray-300 text-sm">{project.description}</p>
@@ -274,7 +277,7 @@ function ProjectsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {aiProjects.map((project, index) => (
             <a key={index} href={project.link} className="block rounded-xl overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 bg-white dark:bg-gray-800">
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+              <Image src={project.image} alt={project.title} className="w-full h-48 object-cover" width={500}  height={300}/>
               <div className="p-6">
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h4>
                 <p className="text-gray-700 dark:text-gray-300 text-sm">{project.description}</p>
