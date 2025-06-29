@@ -196,19 +196,19 @@ const Portfolio: React.FC = () => {
         About Me
       </h2>
       <p className="text-lg leading-relaxed">
-        Fresh BSc Computer Science graduate from the American University of Sharjah with a Minor in Data Science.
+        {`Fresh BSc Computer Science graduate from the American University of Sharjah with a Minor in Data Science.`}
       </p>
       <p className="text-lg leading-relaxed mt-4">
-        My expertise spans full-stack development and Artificial Intelligence, with hands-on 
-        experience in modern web technologies (Spring Boot and .NET) and machine learning frameworks.
+        {`My expertise spans full-stack development and Artificial Intelligence, with hands-on 
+        experience in modern web technologies (Spring Boot and .NET) and machine learning frameworks.`}
       </p>
       <p className="text-lg leading-relaxed mt-4"> 
-        I've successfully completed internships at Emirates Group IT and have built numerous projects ranging from a multilingual AI text detector to scalable 
-        e-commerce applications. 
+        {`I've successfully completed internships at Emirates Group IT and have built numerous projects ranging from a multilingual AI text detector to scalable 
+        e-commerce applications.`} 
       </p>
       <p className="text-lg leading-relaxed mt-4">
-        I'm driven by the challenge of solving complex problems and creating innovative 
-        solutions that bridge the gap between cutting-edge AI research and practical applications.
+        {`I'm driven by the challenge of solving complex problems and creating innovative 
+        solutions that bridge the gap between cutting-edge AI research and practical applications.`}
       </p>
     </section>
 
